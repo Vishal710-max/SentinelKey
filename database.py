@@ -35,7 +35,7 @@ def _get_mongo_uri():
 class MongoDBManager:
     def __init__(self):
         # MongoDB connection details
-        self.connection_string = _get_mongo_uri()
+        self.connection_string = os.getenv("MONGO_URI", "mongodb+srv://bhingardevishal5_db_user:vishal7409@cluster0.zxklmsh.mongodb.net/?appName=Cluster0")
         self.database_name = "password_manager"
         self.client = None
         self.db = None
